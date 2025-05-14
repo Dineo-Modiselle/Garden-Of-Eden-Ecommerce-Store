@@ -19,7 +19,7 @@ function SearchBar() {
           className="w-full pl-10 pr-4 py-2 rounded-full border border-red-300 focus:outline-none focus:ring-2 focus:ring-red-500"
         />
         <Search 
-          className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" 
+          className="absolute  size-3.5 right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" 
         />
       </div>
     </div>

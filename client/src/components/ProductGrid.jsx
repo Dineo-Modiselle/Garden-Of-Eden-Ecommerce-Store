@@ -2,6 +2,7 @@ import React from 'react';
 import ProductCard from './ProductCard';
 import { ArrowDown } from 'lucide-react';
 
+
 // Sample product data (you'd typically fetch this from an API)
 const products = [
   {
@@ -50,6 +51,46 @@ const products = [
     currentPrice: 19.49,
     discount: 35,
     tags: ['Scalp-Soothing', 'Anti-Dandruff', 'Growth-Promoting']
+  }, 
+  {
+    id: 4,
+    name: 'Neem Scalp Treatment',
+    supplierName: 'Herbal Essence',
+    description: 'Scalp treatment with neem and tea tree oil',
+    image: '/api/placeholder/300/200',
+    currentPrice: 19.49,
+    discount: 35,
+    tags: ['Scalp-Soothing', 'Anti-Dandruff', 'Growth-Promoting']
+  },
+  {
+    id: 4,
+    name: 'Neem Scalp Treatment',
+    supplierName: 'Herbal Essence',
+    description: 'Scalp treatment with neem and tea tree oil',
+    image: '/api/placeholder/300/200',
+    currentPrice: 19.49,
+    discount: 35,
+    tags: ['Scalp-Soothing', 'Anti-Dandruff', 'Growth-Promoting']
+  },
+  {
+    id: 4,
+    name: 'Neem Scalp Treatment',
+    supplierName: 'Herbal Essence',
+    description: 'Scalp treatment with neem and tea tree oil',
+    image: '/api/placeholder/300/200',
+    currentPrice: 19.49,
+    discount: 35,
+    tags: ['Scalp-Soothing', 'Anti-Dandruff', 'Growth-Promoting']
+  },
+  {
+    id: 4,
+    name: 'Neem Scalp Treatment',
+    supplierName: 'Herbal Essence',
+    description: 'Scalp treatment with neem and tea tree oil',
+    image: '/api/placeholder/300/200',
+    currentPrice: 19.49,
+    discount: 35,
+    tags: ['Scalp-Soothing', 'Anti-Dandruff', 'Growth-Promoting']
   }
 ];
 
@@ -58,7 +99,7 @@ function ProductGrid() {
     <div>
      
       {/* Product Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map(product => (
           <ProductCard 
             key={product.id}

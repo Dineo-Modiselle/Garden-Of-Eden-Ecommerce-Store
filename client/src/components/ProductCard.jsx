@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import {
-  Heart,
-  Eye,
-  MessageCircle,
   ShoppingCart,
   ShoppingBag,
   Plus,
   Share2,
 } from "lucide-react";
+import { BiSolidMessageRounded } from "react-icons/bi"
+
+import { FaHeart, FaShareAlt, FaEye} from "react-icons/fa";
+import { BiSolidShoppingBag } from "react-icons/bi";
+//import { FaPlus } from "react-icons/fa6";
 import PlaceholderImage from "../assets/placeholderImage.jpg"; // Placeholder image
 
 function ProductCard({
@@ -42,9 +44,9 @@ function ProductCard({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md  relative">
+    <div className="bg-white rounded-lg shadow-md  relative ">
       <div>
-        <h3 className="font-bold rounded-t-lg p-2 text-lg text-white bg-red-300 ">
+        <h3 className="font-bold rounded-t-lg p-2 text-lg text-white bg-[#ff9770] ">
           {name}
         </h3>
       </div>
@@ -69,7 +71,7 @@ function ProductCard({
             onClick={handleLike}
             className="absolute bottom-2 left-2 flex items-center bg-gray-200 rounded-full px-2 py-1 shadow cursor-pointer"
           >
-            <Heart className="w-4 h-4 text-gray-400 fill-gray-400" />
+            <FaHeart className="w-4 h-4 text-gray-400 fill-gray-400" />
             <span className="text-xs text-gray-700 ml-1">{likes}</span>
           </div>
 
@@ -78,7 +80,7 @@ function ProductCard({
             className="absolute bottom-2 right-2 bg-gray-200 p-2 rounded-full shadow cursor-pointer hover:bg-gray-100 transition"
             onClick={() => alert(`Share ${name}`)} // replace with your share logic
           >
-            <Share2 className="w-3 h-3 text-gray-500 fill-gray-800 " />
+            <FaShareAlt className="w-3 h-3 text-gray-500 fill-gray-800 " />
           </div>
         </div>
       </div>
@@ -127,19 +129,24 @@ function ProductCard({
       </div>
 
       {/* Action Buttons */}
-      <div className="flex justify-between items-center">
+      <div className="p-2">
         
-        <div className="flex space-x-2 ">
-          <button className="bg-pink-500 text-white px-3 py-1 rounded flex items-center">
-            <ShoppingBag className="w-4 h-4 mr-1" /> Buy Now
+        <div className="flex space-x-1 ">
+          <button className="bg-[#ff006e] text-white px-12 py-1 rounded flex items-center">
+            <BiSolidShoppingBag className="w-4 h-4 mr-1" /> Buy Now
+          </button>
+          <button className="bg-red-400 px-3 py-1 rounded flex items-center">
+            <Plus className="w-4 h-4 mr-1" /> 
           </button>
         </div>
       </div>
-      <div className="mt-4 border-t pt-2 flex justify-around ">
-        <Eye className="w-5 h-5 fill-gray-500 " />
+      <div className=" border-t p-2 flex justify-around ">
+        <FaEye className="w-5 h-5" />
 
         <Plus className="w-5 h-5" />
-        <MessageCircle className="w-5 h-5  hover:fill-red-300" />
+        <BiSolidMessageRounded className="w-5 h-5 "
+         />
+         
       </div>
       {/* Comments Section */}
             
